@@ -27,6 +27,12 @@ public class bitLy_invoke {
                 ListProject.Survey_URL__c = (String)shortURL;
             }
             Update project;
+        }else {
+            List<Case> obj_case = [SELECT Id, Survey_URL__c FROM Case WHERE Id=:RecordID];
+            for (Case ListCase : obj_case) {
+                ListCase.Survey_URL__c = (String)shortURL;
+            }
+            Update obj_case;
         }
 
         System.Debug('ShortURL : '+shortURL);
