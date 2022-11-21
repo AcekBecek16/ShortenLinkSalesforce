@@ -31,10 +31,11 @@ private class Test_bitLy {
     );
     Insert project;
 
+    Survey getSurvey = [SELECT Id, Name FROM Survey WHERE Name = 'Customer Feedback (Solution)'];
+
     SurveyInvitation surveyInv = new SurveyInvitation(
         Name = 'Survey Invitation',
-        SurveyId = '0KdBB00000000AL0AY',
-        // InvitationLink = 'https://mmcconsulting--survey.sandbox.my.salesforce.com/survey/runtimeApp.app?invitationId=0KiBA00000006gX&surveyName=customer_feedback_solution&UUID=465fac4b-9114-42da-8885-ebf981278c63',
+        SurveyId = getSurvey.Id,
         Object_API_Name__c = 'Project__c',
         Record_ID__c = project.Id,
         SPK_Project__c = project.SPK__c
