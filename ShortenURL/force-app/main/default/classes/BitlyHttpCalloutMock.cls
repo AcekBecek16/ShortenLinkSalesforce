@@ -7,7 +7,7 @@ public class BitlyHttpCalloutMock implements HttpCalloutMock {
 
         if ( endpoint.contains('/oauth/access_token') ) {
             return buildOAuthResponse( req );
-        } else if ( endpoint.contains('/v4/shorten') ) {
+        } else if ( endpoint.contains('/links') ) {
             return buildShortenResponse( req );
         }
 
@@ -31,7 +31,7 @@ public class BitlyHttpCalloutMock implements HttpCalloutMock {
         // See https://dev.bitly.com/api-reference#createBitlink
         // for full details of what a response could include.
         res.setBody(JSON.serializePretty(new Map<String, Object>{
-            'link' => 'https://sforce.co/3rUWGZ8'
+            'link' => 'https://msforce.id/3rUWGZ8'
         }));
         res.setStatusCode(200);
 
