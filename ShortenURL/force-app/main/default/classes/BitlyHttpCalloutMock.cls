@@ -7,7 +7,7 @@ public class BitlyHttpCalloutMock implements HttpCalloutMock {
 
         if ( endpoint.contains('/oauth/access_token') ) {
             return buildOAuthResponse( req );
-        } else if ( endpoint.contains('/links') ) {
+        } else if ( endpoint.contains('/v4/shorten') ) {
             return buildShortenResponse( req );
         }
 
