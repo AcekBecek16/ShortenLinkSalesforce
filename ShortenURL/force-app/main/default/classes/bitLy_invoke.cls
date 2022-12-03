@@ -6,11 +6,11 @@ public class bitLy_invoke {
         SurveyInvitation surveyInv = [SELECT Id, Record_ID__c, Object_API_Name__c, SPK_Project__c, InvitationLink FROM SurveyInvitation WHERE Id=:ids];
 
         String body = JSON.serialize(new Map<String, Object>{
-            // 'long_url' => String.valueOf(surveyInv.InvitationLink),
-            // 'domain' => 'bit.ly',
-            // 'group_guid' => System.label.bitly_groupID
-            'domain' => 'msforce.id',
-            'originalURL' => String.valueOf(surveyInv.InvitationLink)
+            'long_url' => String.valueOf(surveyInv.InvitationLink),
+            'domain' => 'bit.ly',
+            'group_guid' => System.label.bitly_groupID
+            // 'domain' => 'msforce.id',
+            // 'originalURL' => String.valueOf(surveyInv.InvitationLink)
             
         });
 

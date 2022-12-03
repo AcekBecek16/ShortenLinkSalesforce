@@ -31,7 +31,7 @@ public class BitlyHttpCalloutMock implements HttpCalloutMock {
         // See https://dev.bitly.com/api-reference#createBitlink
         // for full details of what a response could include.
         res.setBody(JSON.serializePretty(new Map<String, Object>{
-            'link' => 'https://msforce.id/3rUWGZ8'
+            'link' => 'https://sforce.id/3rUWGZ8'
         }));
         res.setStatusCode(200);
 
